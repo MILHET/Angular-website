@@ -1,16 +1,18 @@
-import { Component, OnInit } from '@angular/core';
+/* Angular modules */
+import { Component } from '@angular/core';
 import { NgAnimateScrollService } from 'ng-animate-scroll';
+
+import Projects from './projectsConf.json';
 
 @Component({
     selector: 'app-projects',
     templateUrl: './projects.component.html',
     styleUrls: ['./projects.component.scss']
 })
-export class ProjectsComponent implements OnInit {
+export class ProjectsComponent {
+    projectsList: any = Projects;
 
     constructor(private animateScrollService: NgAnimateScrollService) { }
-
-    ngOnInit() {}
 
     ShowModal(modal) {
         document.getElementById(modal).style.display = 'block';

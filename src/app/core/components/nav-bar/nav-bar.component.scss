@@ -1,0 +1,10 @@
+.navbar {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-color: black;
+}
+
+.navbar.scrolled{
+  opacity: 1;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

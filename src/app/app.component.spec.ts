@@ -1,5 +1,10 @@
+/* Angular modules */
 import { TestBed, async } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { RouterOutlet } from '@angular/router';
+import { By } from '@angular/platform-browser';
+
+/* Components */
 import { AppComponent } from './app.component';
 
 describe('AppComponent', () => {
@@ -20,16 +25,15 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'website'`, () => {
+  it(`should have as title 'Francois Milhet'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('website');
+    expect(app.title).toEqual('Francois Milhet');
   });
 
-  it('should render title in a h1 tag', () => {
+  it('should have a router-outlet directive', () => {
     const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to website!');
+    const debugEl = fixture.debugElement.query(By.directive(RouterOutlet));
+    expect(debugEl).not.toBeNull();
   });
 });

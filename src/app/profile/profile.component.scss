@@ -1,4 +1,4 @@
-.wrap {
+.profile {
   position: absolute;
   top: 0;
   left: 0;
@@ -24,6 +24,12 @@
   float: left;
   width: 50%;
   padding: 70px;
+
+  &__footer {
+    text-align: center;
+    width: 100%;
+  }
+
   h1 {
     display: inline-block;
     font-family: "Playfair Display", serif;
@@ -56,11 +62,6 @@
     color: rgba(51,51,51,.6);
 
   }
-}
-
-.dl {
-  text-align: center;
-  width: 100%;
 }
 
 a.cubeBtn {
@@ -135,7 +136,7 @@ a.cubeBtn:focus span::before {
       font-size: 45px;
     }
   }
-  .wrap {
+  .profile {
     position: relative;
   }
 }

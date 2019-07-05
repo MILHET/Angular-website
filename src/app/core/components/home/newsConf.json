@@ -1,0 +1,50 @@
+[
+  {
+    "newsTitle": "Samsung Galaxy Fold",
+    "image":"../../../../assets/image/samsung.jpg",
+    "url": "https://www.20minutes.fr/high-tech/2545931-20190622-samsung-problemes-corriges-galaxy-fold-pret-etre-lance-marche",
+    "description":"Initially scheduled for April 26, the marketing of Samsung Galaxy Fold should finally begin soon. The leader did not release the release date of the highly anticipated smartphone that will cost 2,000 dollars."
+  },
+  {
+    "newsTitle": "Eco Surfing",
+    "image":"../../../../assets/image/ecoSurf.png",
+    "url": "http://www.surfsession.com/articles/environnement/etes-vous-surfeur-eco-friendly-221182734.html",
+    "description":"ARE YOU AN ECO-FRIENDLY SURFER ?\n The bad news about the oceans is growing. And we surfers are more than ever concerned ..."
+  },
+  {
+    "newsTitle": "Andy Irons",
+    "image":"../../../../assets/image/Andy.png",
+    "url": "https://www.surfsession.com/articles/les-surfeurs/6-legendes-surf-racontent-andy-irons-1103181485.html",
+    "description":"Eight years after the tragic disappearance of Andy Irons, on November 2nd, 2010, these interviews extracted from KISSED BY GOD help us to remember us of the Hawaiian surfer..."
+  },
+  {
+    "newsTitle": "IA",
+    "image":"../../../../assets/image/IA.jpg",
+    "url": "https://www.zdnet.fr/actualites/comment-l-ia-est-en-train-de-changer-toute-la-nature-du-calcul-informatique-39886897.htm",
+    "description": "Machine learning, especially deep learning, requires reassessing how chips and systems are designed, which is changing the direction of the industry for decades to come."
+  },
+  {
+    "newsTitle": "TypeScript",
+    "image":"../../../../assets/image/TypeScript.jpg",
+    "url": "https://www.zdnet.fr/actualites/langages-de-programmation-pourquoi-les-developpeurs-javascript-choisissent-typescript-39884455.htm",
+    "description": "The adoption of TypeScript explodes, observes analysts. And that's good news for Microsoft. And Java developers may also be interested in number TypeScript."
+  },
+  {
+    "newsTitle": "Angular8",
+    "image":"../../../../assets/image/Angular8.jpg",
+    "url": "https://www.infoq.com/news/2019/07/angular-8-release/",
+    "description": "The Angular team recently released Angular 8, the latest major release of its single page application framework. The release includes a large number of bug fixes..."
+  },
+  {
+    "newsTitle": "Libra",
+    "image":"../../../../assets/image/libra.png",
+    "url": "https://www.silicon.fr/libra-un-tournant-vers-ladoption-de-la-blockchain-par-les-grandes-entreprises-254925.html",
+    "description": "In addition to its potential to become the main existing cryptocurrency, Libra is contributing to blockchain adoption by opening up public debate on the opportunities, challenges and weaknesses of technology."
+  },
+  {
+    "newsTitle": "Dev Salary",
+    "image":"../../../../assets/image/Dev.png",
+    "url": "https://www.silicon.fr/salaires-developpeurs-san-francisco-paris-250879.html",
+    "description": "In Paris, the average annual salary of developers and other technology profiles has increased by 8% in 2018. No problem for San Francisco."
+  }
+]

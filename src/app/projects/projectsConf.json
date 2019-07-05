@@ -1,0 +1,32 @@
+[
+  {
+    "projectsTitle": "Ganymède",
+    "class": "p1",
+    "action": "Modal1",
+    "description": "The GANYMEDE project, is a budgetary tool, focus to simplify project monitoring, and more specifically to carry out budgetary monitoring."
+  },
+  {
+    "projectsTitle": "Server FTP & IRC",
+    "class": "p2",
+    "action": "Modal1",
+    "description": "I realized for a school project an FTP(File Transfer Protocol) and an IRC(Internet Relay Chat) server in C language."
+  },
+  {
+    "projectsTitle": "Bomberman game",
+    "class": "p3",
+    "action": "Modal2",
+    "description": "With a group, we made a cross-platform 3D Bomberman video game in C++ using the irrlicht libraries."
+  },
+  {
+    "projectsTitle": "Dashboard",
+    "class": "p4",
+    "action": "Modal3",
+    "description": "I realized a dashboard with nodeJS - Docker."
+  },
+  {
+    "projectsTitle": "Strace linux command",
+    "class": "p5",
+    "action": "Modal4",
+    "description": "I recreated the Strace linux command in C."
+  }
+]

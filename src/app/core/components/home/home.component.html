@@ -1,0 +1,65 @@
+<app-carousel></app-carousel>
+
+<div class="arrow" id="arrow">
+    <a (click)="handleClick()"><span></span></a>
+</div>
+
+<div class="about" id="about">
+    <h1>About Me</h1><hr>
+    <img src="../../../../assets/image/full-stack-developer.png">
+    <h2>I’m François MILHET, a full stack developer student based in Paris.<br>
+        If you want to know more about me just <a routerLink="/profile">click here.</a></h2>
+</div>
+
+<div class="experience">
+    <h1>STUDIES</h1><hr>
+    <div class="row" style="margin-right: 0">
+        <div class="col-md-6">
+            <div class="workYear">
+                sept-2016<br>sept-2021
+            </div>
+            <div class="arrowpart"></div>
+            <div class="exCon">
+                <h2>FORMATION<br><a target="_blank" href="http://www.epitech.eu/" >EPITECH</a> (The school of innovation)</h2>
+            </div>
+            <div class="workYear">
+                Sept-2018<br>March-2018
+            </div>
+            <div class="arrowpart"></div>
+            <div class="exCon">
+                <h2>INTERNSHIP<br>Teaching Assistant at <a target="_blank" href="https://campus.samsung.fr/">Samsung</a></h2>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="workYear">
+                Sept-2017<br>Dec-2017
+            </div>
+            <div class="arrowpart"></div>
+            <div class="exCon">
+                <h2>INTERNSHIP<br>Full stack developer at <a target="_blank" href="https://glob.vip/fr/">Glob</a></h2>
+            </div>
+            <div class="workYear">
+                Apr-2019<br>Jul-2019
+            </div>
+            <div class="arrowpart"></div>
+            <div class="exCon">
+                <h2>INTERNSHIP<br>Front-End developer at <a target="_blank" href="https://www.groupeonepoint.com/">Onepoint</a></h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="news">
+    <h1>INTEREST</h1><hr>
+    <div class="news__cards">
+        <a class="news__card" target="_blank" *ngFor="let element of newsList" href="{{element.url}}">
+            <img src="{{element.image}}">
+            <article class="news__card__content">
+                {{element.description}}
+            </article>
+        </a>
+    </div>
+</div>
+
+<app-footer></app-footer>
+

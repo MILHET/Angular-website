@@ -1,4 +1,3 @@
-<app-nav-bar></app-nav-bar>
 <header>
     <div class="head-texte">
         <h1 class="main-texte">François Milhet</h1>
@@ -8,55 +7,29 @@
         </a>
     </div>
 </header>
+
 <div class="header-projects" id="down">
     <h1>Projects</h1>
     <h2> My ultimate goal is to become a full-stack developer and my skill-set constantly changes.<br>
         If you want to talk about a project, just <a routerLink="/contact">contact</a> me.</h2>
-    <img class="logo" src="../../assets/image/logo1.png">
-    <img class="logo" src="../../assets/image/logo2.png">
-    <img class="logo" src="../../assets/image/logo3.png">
-    <img class="logo" src="../../assets/image/logo4.png">
+    <img class="logo" src="../../assets/image/clogo.png">
+    <img class="logo" src="../../assets/image/c++logo.png">
+    <img class="logo" src="../../assets/image/AngularLogo.png">
+    <img class="logo" src="../../assets/image/NodeJsLogo.png">
 </div>
+
 <div class="projects">
-    <div class="row">
-        <div class="col-sm-6">
-            <div class="case" style="background: url(../../assets/image/Server-Back.jpg);">
-                <h1>Server FTP & IRC</h1><hr>
-                <div class="subcase" (click)="ShowModal('Modal1')">
-                    <h2>I realized for a school project an FTP(File Transfer Protocol) and an IRC(Internet Relay Chat) server in C language.<br></h2>
+    <div class="projects__cards">
+            <div class="projects__card {{element.class}}" *ngFor="let element of projectsList">
+                <h1>{{element.projectsTitle}}</h1><hr>
+                <div class="projects__card__infos" (click)="ShowModal(element.action)">
+                    <h2>{{element.description}}<br></h2>
                     <h3>Click for more...</h3>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="case" style="background: url(../../assets/image/Bomberman-Back.jpg);">
-                <h1 style=" text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;">Bomberman game</h1><hr>
-                <div class="subcase" (click)="ShowModal('Modal2')">
-                    <h2>With a group, we made a cross-platform 3D Bomberman video game in C++ using the irrlicht libraries.<br></h2>
-                    <h3>Click for more...</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="case" style="background: url(../../assets/image/dashboard.png);">
-                <h1>Dashboard</h1><hr>
-                <div class="subcase" (click)="ShowModal('Modal3')">
-                    <h2>I realized a dashboard with nodeJS - Docker.<br></h2>
-                    <h3>Click for more...</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-sm-6">
-            <div class="case" style="background: url(../../assets/image/Strace-Back.jpg);">
-                <h1>Strace linux command</h1><hr>
-                <div class="subcase" (click)="ShowModal('Modal4')">
-                    <h2>I recreated the Strace linux command in C.<br></h2>
-                    <h3>Click for more...</h3>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
+
 <div id="Modal1" class="modal">
     <div class="modal-content">
         <span (click)="CloseModal('Modal1')" class="close">&times;</span>
