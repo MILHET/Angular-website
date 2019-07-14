@@ -26,6 +26,15 @@ hr {
   }
 }
 
+@media only screen and (max-width: 768px) {
+  .about {
+    background: darkslategray;
+  }
+  .news {
+    background: darkslategray !important;
+  }
+}
+
 .experience {
   text-align: center;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);

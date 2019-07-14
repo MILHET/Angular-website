@@ -1,32 +1,38 @@
 [
   {
     "projectsTitle": "Ganymède",
-    "class": "p1",
-    "action": "Modal1",
+    "class": "p6",
+    "action": "Modal6",
     "description": "The GANYMEDE project, is a budgetary tool, focus to simplify project monitoring, and more specifically to carry out budgetary monitoring."
   },
   {
+    "projectsTitle": "Total-Transports75",
+    "class": "p5",
+    "action": "Modal5",
+    "description": "Total Transports specializes in road transport, offers services for both individuals and professionals. Moving, transport of goods, and delivery of parcels."
+  },
+  {
     "projectsTitle": "Server FTP & IRC",
-    "class": "p2",
-    "action": "Modal1",
+    "class": "p4",
+    "action": "Modal4",
     "description": "I realized for a school project an FTP(File Transfer Protocol) and an IRC(Internet Relay Chat) server in C language."
   },
   {
     "projectsTitle": "Bomberman game",
     "class": "p3",
-    "action": "Modal2",
+    "action": "Modal3",
     "description": "With a group, we made a cross-platform 3D Bomberman video game in C++ using the irrlicht libraries."
   },
   {
     "projectsTitle": "Dashboard",
-    "class": "p4",
-    "action": "Modal3",
+    "class": "p2",
+    "action": "Modal2",
     "description": "I realized a dashboard with nodeJS - Docker."
   },
   {
     "projectsTitle": "Strace linux command",
-    "class": "p5",
-    "action": "Modal4",
+    "class": "p1",
+    "action": "Modal1",
     "description": "I recreated the Strace linux command in C."
   }
 ]

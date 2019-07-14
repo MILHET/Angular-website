@@ -11,11 +11,13 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 /* Components */
 import { CarouselComponent } from './components/carousel/carousel.component';
 import { SocialComponent } from './components/social/social.component';
+import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
   declarations: [
     CarouselComponent,
-    SocialComponent
+    SocialComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

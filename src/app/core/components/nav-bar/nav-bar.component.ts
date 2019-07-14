@@ -7,7 +7,7 @@ import {Component, HostListener } from '@angular/core';
     styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent {
-    toggleNavbar = true;
+    isNavbarCollapsed = true;
     scrolled = false;
 
     constructor() { }
