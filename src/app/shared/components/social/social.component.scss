@@ -10,6 +10,7 @@ ul {
 }
 
 #sticky-social {
+  z-index: 1000;
   left: 0;
   position: fixed;
   top: 150px;
