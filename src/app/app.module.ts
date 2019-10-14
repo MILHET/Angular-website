@@ -30,7 +30,7 @@ import { ContactComponent } from './contact/contact.component';
         CoreModule,
         SharedModule,
         FormsModule,
-        MDBBootstrapModule
+        MDBBootstrapModule.forRoot()
     ],
     providers: [],
     bootstrap: [AppComponent]

@@ -6,6 +6,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 /* NgBootstrap */
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+
+/* Material Angular */
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 /* Components */
@@ -14,24 +16,25 @@ import { SocialComponent } from './components/social/social.component';
 import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
-  declarations: [
-    CarouselComponent,
-    SocialComponent,
-    ModalComponent
-  ],
-  imports: [
-    CommonModule,
-    MDBBootstrapModule,
-    NgbModule,
-    RouterModule,
-    ReactiveFormsModule
-  ],
-  exports: [
-    CarouselComponent,
-    SocialComponent,
-    NgbModule,
-    RouterModule,
-    ReactiveFormsModule
-  ]
+    declarations: [
+        CarouselComponent,
+        SocialComponent,
+        ModalComponent
+    ],
+    imports: [
+        CommonModule,
+        NgbModule,
+        RouterModule,
+        ReactiveFormsModule,
+        MDBBootstrapModule.forRoot()
+    ],
+    exports: [
+        CarouselComponent,
+        SocialComponent,
+        NgbModule,
+        RouterModule,
+        ReactiveFormsModule,
+        MDBBootstrapModule
+    ]
 })
 export class SharedModule { }
