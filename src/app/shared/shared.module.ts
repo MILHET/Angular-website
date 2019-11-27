@@ -11,13 +11,11 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 /* Components */
-import { CarouselComponent } from './components/carousel/carousel.component';
 import { SocialComponent } from './components/social/social.component';
 import { ModalComponent } from './components/modal/modal.component';
 
 @NgModule({
     declarations: [
-        CarouselComponent,
         SocialComponent,
         ModalComponent
     ],
@@ -29,7 +27,6 @@ import { ModalComponent } from './components/modal/modal.component';
         MDBBootstrapModule.forRoot()
     ],
     exports: [
-        CarouselComponent,
         SocialComponent,
         NgbModule,
         RouterModule,

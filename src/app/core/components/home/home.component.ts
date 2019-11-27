@@ -11,6 +11,10 @@ import News from './newsConf.json';
 })
 export class HomeComponent {
     newsList: any = News;
+    show1 = false;
+    show2 = false;
+    show3 = false;
+    show4 = false;
 
     constructor(private animateScrollService: NgAnimateScrollService) { }
 

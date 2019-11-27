@@ -4,6 +4,15 @@ hr {
   border-top: 1px solid #eee;
 }
 
+.banner {
+  overflow: hidden;
+
+  img {
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 .about {
   color: white;
   padding-top: 50px;
@@ -26,15 +35,6 @@ hr {
   }
 }
 
-@media only screen and (max-width: 768px) {
-  .about {
-    background: darkslategray;
-  }
-  .news {
-    background: darkslategray !important;
-  }
-}
-
 .experience {
   text-align: center;
   box-shadow: 0 0 50px rgba(0, 0, 0, 0.08);
@@ -48,7 +48,22 @@ hr {
     padding: 22px 47px 6px 47px;
     margin-left: 15px;
     margin-bottom: 30px;
+     }
+
+  .more {
+    display: none;
+    text-align: left;
+
+    h3 {
+      font-weight: 100;
+      font-size: 20px;
+    }
   }
+
+  .exCon:hover .more {
+    display: block;
+  }
+
   .workYear {
     font-size: 17px;
     margin: 0 auto;
@@ -122,6 +137,20 @@ hr {
     font-size: 36px;
   }
 
+}
+
+@media only screen and (max-width: 768px) {
+  .banner {
+    img {
+      height: 60vh;
+    }
+  }
+  .about {
+    background: darkslategray;
+  }
+  .news {
+    background: darkslategray !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
