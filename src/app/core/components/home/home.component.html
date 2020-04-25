@@ -1,87 +1,440 @@
-<div class="banner">
-    <img src="../../../../assets/image/backCarousel.jpg">
+<mat-toolbar class="navbar">
+
+  <div fxHide.gt-xs>
+
+    <button mat-icon-button class="navbar__button" (click)="onToggleSidenav()">
+      <mat-icon>menu</mat-icon>
+    </button>
+
+  </div>
+
+  <div class="navbar__brand">
+    <a routerLink="">
+      <img src="../../../../assets/img/Logo.png" alt="Gearstocks"/>
+    </a>
+  </div>
+
+  <div fxFlex fxLayout fxLayoutAlign="start" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px">
+      <li>
+        <a routerLink="">Home</a>
+      </li>
+      <li>
+        <a  (click)="handleClick(about)">About</a>
+      </li>
+      <li>
+        <a  (click)="handleClick(studies)">Studies</a>
+      </li>
+      <li>
+        <a  (click)="handleClick(projects)">Projects</a>
+      </li>
+    </ul>
+  </div>
+
+  <div fxFlex fxLayout fxLayoutAlign="end" fxHide.xs>
+    <ul fxLayout fxLayoutGap="15px">
+    </ul>
+  </div>
+
+</mat-toolbar>
+
+<div class="banner" #target detect-scroll (onScroll)="scroll($event)">
+
+  <div class="banner__lottie">
+    <ng-lottie [options]="options2" (animationCreated)="handleAnimation($event)"></ng-lottie>
+  </div>
+
+  <img src="../../../../assets/img/homeBanner.jpg">
 </div>
 
 <div class="arrow" id="arrow">
-    <a (click)="handleClick()"><span></span></a>
+  <a (click)="handleClick(about)"><span></span></a>
 </div>
 
-<div class="about" id="about">
-    <h1>About Me</h1><hr>
-    <img src="../../../../assets/image/full-stack-developer.png">
-    <h2>I’m François MILHET, a full stack developer student based in Paris.<br>
-        If you want to know more about me just <a routerLink="/profile">click here.</a></h2>
-</div>
+<div class="about" #about id="about">
 
-<div class="experience">
-    <h1>STUDIES</h1><hr>
-    <div class="row" style="margin-right: 0">
-        <div class="col-md-6">
-            <div class="workYear">
-                sept-2016<br>sept-2021
-            </div>
-            <div class="arrowpart"></div>
-            <div class="exCon">
-                <h2>FORMATION<br><a target="_blank" href="http://www.epitech.eu/" >EPITECH</a> (The school of innovation)</h2>
-                <div class="more">
-                    <h3>• Courses taken include .NET, C / C++, Cisco, PHP & Oracle</h3>
-                    <h3>• Projects: Create & develop Shell, Raytracer, project
-                        management websites, diverse clients/servers (IRC, FTP,
-                        HTTP, etc), videogame utilizing renderware 3D motor
-                        engine & conception of an innovative GPS with Virtual
-                        Machine.</h3>
-                </div>
-            </div>
-            <div class="workYear">
-                Sept-2018<br>March-2019
-            </div>
-            <div class="arrowpart"></div>
-            <div class="exCon">
-                <h2>INTERNSHIP<br>Teaching Assistant at <a target="_blank" href="https://campus.samsung.fr/">Samsung</a></h2>
-                <div class="more">
-                    <h3>• Using my web development skills to assist students during their training at the Samsung Campus.</h3>
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="workYear">
-                Sept-2017<br>Dec-2017
-            </div>
-            <div class="arrowpart"></div>
-            <div class="exCon">
-                <h2>INTERNSHIP<br>Full stack developer at <a target="_blank" href="https://glob.vip/fr/">Glob</a></h2>
-                <div class="more">
-                    <h3>• Development of an Android application</h3>
-                    <h3>• Carried out research & development in C++ for traffic algorithm</h3>
-                    <h3>• Creation of a website to manage a traffic enforcement camera database</h3>
-                </div>
-            </div>
-            <div class="workYear">
-                Apr-2019<br>Jul-2019
-            </div>
-            <div class="arrowpart"></div>
-            <div class="exCon">
-                <h2>INTERNSHIP<br>Front-End developer at <a target="_blank" href="https://www.groupeonepoint.com/">Onepoint</a></h2>
-                <div class="more">
-                    <h3>• Development of a budget management tool for EDF in Angular7 </h3>
-                    <h3>• Development in Agile Scrum</h3>
-                </div>
-            </div>
-        </div>
+  <h1>About Me</h1><hr>
+
+  <div class="about__lottie">
+    <ng-lottie [options]="options1"></ng-lottie>
+  </div>
+
+  <div class="about__resume">
+    <h2>I’m François MILHET, a full stack developer who’s very curious about new technologies.<br>
+      I was born and raised in Guadeloupe, and I came to Paris to study at EPITECH Paris.<br>
+    </h2>
+    <h2>
+      I have been Freelance since 2016, working on various domains. Excellent teamwork & communication skills.<br>
+      My objective as a developer is to help your business advance developing applications and products that are dynamic, powerful, straightforward and astute.
+    </h2>
+    <h2>
+      I have a strong knowledge in Front-end Development especially with Angular, but I'm able to learn a new language if needed for a project.<br>
+      I do have also a good knowledge in Backend Development with NodeJs and PHP.
+    </h2>
+  </div>
+
+  <div class="row">
+
+    <div class="column">
+
+      <h1>Hobbies</h1>
+      <hr style="width: 13%">
+
+      <div class="about__hobbies">
+        <ng-lottie [options]="options3"></ng-lottie>
+        <p>Skate</p>
+      </div>
+      <div class="about__hobbies">
+        <ng-lottie [options]="options4"></ng-lottie>
+        <p>Games</p>
+      </div>
+      <div class="about__hobbies">
+        <ng-lottie [options]="options5"></ng-lottie>
+        <p>Moto</p>
+      </div>
     </div>
-</div>
 
-<div class="news">
-    <h1>INTEREST</h1><hr>
-    <div class="news__cards">
-        <a class="news__card" target="_blank" *ngFor="let element of newsList" href="{{element.url}}">
-            <img src="{{element.image}}">
-            <article class="news__card__content">
-                {{element.description}}
-            </article>
-        </a>
+    <div class="column">
+
+      <h1>Languages</h1>
+      <hr style="width: 13%">
+
+      <div class="about__language">
+        <img src="../../../../assets/img/Flag_of_France.png">
+      </div>
+
+      <div class="about__language" style="padding-bottom: 20px">
+        <img src="../../../../assets/img/Flag_of_the_United_Kingdom.svg.png">
+      </div>
+
     </div>
+
+  </div>
+
+  <a href="../../../../assets/img/CV-Francois-MILHET.pdf" download="CV-Francois-MILHET" class="cubeBtn">
+    <span data-hover="Thank You!">Download my CV</span>
+  </a>
+
 </div>
 
-<app-footer></app-footer>
+<div class="experience" #studies>
+
+  <h1>STUDIES</h1><hr>
+
+  <div class="row" style="margin-right: 0">
+
+    <div class="col-md-6">
+
+      <div class="experience__workyear">
+        <p>Sept-2016<br>Sept-2021</p>
+      </div>
+
+      <div class="experience__arrowpart"></div>
+
+      <div class="experience__exCon">
+        <h2>FORMATION<br><a target="_blank" href="http://www.epitech.eu/" >EPITECH</a> (The school of innovation)</h2>
+      </div>
+
+      <div class="experience__workyear">
+        <p>Sept-2018<br>March-2019</p>
+      </div>
+
+      <div class="experience__arrowpart"></div>
+
+      <div class="experience__exCon">
+        <h2>INTERNSHIP<br>Teaching Assistant at <a target="_blank" href="https://campus.samsung.fr/">Samsung</a></h2>
+      </div>
+
+    </div>
+
+    <div class="col-md-6">
+
+      <div class="experience__workyear">
+        <p>Sept-2017<br>March-2018</p>
+      </div>
+
+      <div class="experience__arrowpart"></div>
+
+      <div class="experience__exCon">
+        <h2>INTERNSHIP<br>Full stack developer at <a target="_blank" href="https://glob.vip/fr/">Glob</a></h2>
+      </div>
+
+      <div class="experience__workyear">
+        <p>Apr-2019<br>Aug-2019</p>
+      </div>
+
+      <div class="experience__arrowpart"></div>
+
+      <div class="experience__exCon">
+        <h2>INTERNSHIP<br>Front-End developer at <a target="_blank" href="https://www.groupeonepoint.com/">Onepoint</a></h2>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div class="projects" #projects id="projects">
+
+  <h1>My Projects</h1><hr>
+
+  <mat-grid-list [cols]=breakpoint [gutterSize]="'10px'" rowHeight="2:1" (window:resize)="onResize($event)">
+
+    <mat-grid-tile class="projects__p1" (click)="showModal('p1')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Ganymède</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+
+    <mat-grid-tile class="projects__p2" (click)="showModal('p2')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Total-Transport75</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="projects__p3" (click)="showModal('p3')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Bomberman Game</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="projects__p4" (click)="showModal('p4')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Server FTP & IRC</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="projects__p5" (click)="showModal('p5')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Strace Linux command</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+    <mat-grid-tile class="projects__p6" (click)="showModal('p6')">
+      <div class="projects__box">
+        <div class="projects__box__table">
+          <p>Dashboard</p>
+        </div>
+      </div>
+    </mat-grid-tile>
+  </mat-grid-list>
+
+</div>
+
+<div id="p1" class="modal">
+  <div class="modal__content">
+    <span (click)="closeModal('p1')" class="close">&times;</span>
+
+    <h1>Ganymède Project</h1>
+
+    <div class="modal__content__desc">
+
+      <h2>
+        &#9679; As a FullStack developer at Onepoint i was place as a front-end developer on the Ganymède project, a budgetary tool for EDF company, focus to simplify project monitoring, and more specifically to carry out budgetary monitoring.
+      </h2>
+
+      <h2 style="padding-left: 20px">
+        The project was develop in Angular7 with an NgRx architecture. To complete the delivery of the tool, it was chosen to follow the agile Scrum methodology.<br>
+        There is some view of the tools :
+      </h2>
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <a href="../../../../assets/img/edf1.png" target="_blank">
+            <img src="../../../assets/img/edf1.png" class="img-thumbnail">
+          </a>
+        </div>
+
+        <div class="col-sm-6">
+          <a href="../../../assets/img/edf2.png" target="_blank">
+            <img src="../../../assets/img/edf2.png" class="img-thumbnail">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="p2" class="modal">
+  <div class="modal__content">
+
+    <span (click)="closeModal('p2')" class="close">&times;</span>
+
+    <h1>Total Transports75</h1>
+
+    <div class="modal__content__desc">
+
+      <h2>
+        &#9679; For a freelance project, i do an Angular7 website for a company in Paris specializes in road transport, with a simulator to do the quote.<br>
+        You can check the website on the link bellow !
+      </h2>
+
+      <a href="https://www.total-transports.com" target="_blank">
+        <img src="../../../assets/img/total-transport.png" class="img-thumbnail">
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="p3" class="modal">
+  <div class="modal__content">
+
+    <span (click)="closeModal('p3')" class="close">&times;</span>
+
+    <h1>Bomberman Game</h1>
+
+    <div class="modal__content__desc">
+
+      <h2>
+        &#9679; Bomberman is one of the most famous video games of all time.
+        With over 70 franchises, ranging from the first version on MSX, ZX Spectrum and Sharp MZ-700 in 1983
+        to the lastest versions on modern consoles, over 10 million units have been sold.<br>
+      </h2>
+
+      <h2 style="padding-left: 20px">-Our gameplay reference is Neo Bomberman, released on the Neo Geo and MVS systems in 1997.<br>
+        -On that base, we made a local multi-player game with the possibility to play with a friend + AI’s controlled bots. We made the game in C++, using the <a href="http://irrlicht.sourceforge.net/" target="_blank">Irrlicht</a> Engine who is an open source high performance realtime 3D engine written in C++.
+      </h2>
+
+      <div class="row">
+
+        <div class="col-sm-6">
+          <a href="../../../../assets/img/Menu.png" target="_blank">
+            <img src="../../../../assets/img/Menu.png" class="img-thumbnail">
+          </a>
+        </div>
+
+        <div class="col-sm-6">
+          <a href="../../../../assets/img/Game.png" target="_blank">
+            <img src="../../../../assets/img/Game.png" class="img-thumbnail">
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="p4" class="modal">
+  <div class="modal__content">
+
+    <span (click)="closeModal('p4')" class="close">&times;</span>
+
+    <h1>Server FTP & IRC</h1>
+
+    <div class="modal__content__desc">
+
+      <h2>
+        &#9679; FTP(File Transfer Protocol) server allows, as the name suggests, to transfer files over the Internet or through a local computer network (intranet).
+        Anyone with permission, can download and send files to a remote computer running such a server.
+      </h2>
+
+      <h2>
+        &#9679; IRC(Internet Relay Chat) server is a textual communication protocol on the Internet.
+        It is used for instant communication mainly in the form of group discussions via chat channels, but can also be used for one-to-one communication. It can also be used for file transfer.
+      </h2>
+
+      <h3>
+        I made both of this server entirely functional in C language. Obviously they was able to handle several clients at the same time, and have an identification system with a login and a password.
+      </h3>
+
+      <a href="../../../assets/img/FTP-IRC.png" target="_blank">
+        <img src="../../../assets/img/FTP-IRC.png" class="img-thumbnail">
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="p5" class="modal">
+  <div class="modal__content">
+
+    <span (click)="closeModal('p5')" class="close">&times;</span>
+
+    <h1>Strace command</h1>
+
+    <div class="modal__content__desc">
+      <h2>
+        &#9679; Strace, is a UNIX / LINUX command who traces a program in real time and displays all of the system calls it executes in their order of appearance.<br>
+      </h2>
+
+      <h2 style="padding-left: 20px">
+        -System calls are the fundamental interfaces between applications and the kernel.<br>
+        -Strace is a powerful troubleshooting tool for all unix / linux administrators and users.
+      </h2>
+
+      <a href="./../../assets/img/StraceCode.png" target="_blank">
+        <img src="../../../assets/img/StraceCode.png" class="img-thumbnail">
+      </a>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div id="p6" class="modal">
+  <div class="modal__content">
+
+    <span (click)="closeModal('p6')" class="close">&times;</span>
+
+    <h1>Dashboard</h1>
+
+    <div class="modal__content__desc">
+
+      <h2>
+        &#9679; A Dashboard is a computerized tool for centralizing in a single point a set of data to control an activity.<br>
+      </h2>
+
+      <h2 style="padding-left: 20px">
+        For this project, i use NodeJs for all the user management, and MogoDb for the data base.<br>
+        I use different API for the different services on my dashboard like the weather, News, Market price, imgur...<br>
+        And the build project was done with docker-compose.
+      </h2>
+
+    </div>
+
+  </div>
+
+</div>
+
+<div (click)="handleClick(target)" id="icone" [ngClass]="{'invisible': !this.onScroll}">
+  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="cRetour" [ngClass]="{'cInvisible': !this.onScroll, 'cVisible': this.onScroll }"
+       x="0px" y="0px" width="256" height="192" viewBox="0 0 1024 768" style="enable-background:new 0 0 1024 768;" xml:space="preserve">
+  <style type="text/css">
+    .st0{fill:#EEE0C3;}
+    .st1{fill:#961906;}
+    .st2{fill:#E61915;}
+    .st3{fill:#483E34;stroke:#FFFFFF;stroke-width:10;stroke-miterlimit:10;}
+  </style>
+    <path class="st0" d="M528.3,657c0,0-57.8-8.4-102.8-47.5s-50-303.6-50-303.6s-10.5-73.9,15.3-151.6c0.3-0.8,0.5-1.6,0.8-2.4  c0.3-0.9,0.6-1.7,0.9-2.6c26.4-74.9,117.5-115,128-119.4l0-0.4c0,0,3.4-1.1,7.3-1.3c2.5-0.1,5.2,0.1,7.4,1.3c0,0,101,40.3,129,119.8  c0.6,1.8,1.2,3.5,1.8,5.3c0.3,0.9,0.6,1.8,0.9,2.6c24.6,76.6,14.3,148.6,14.3,148.6s-5,264.5-50,303.6  C586.2,648.6,528.4,657,528.3,657"/>
+    <path class="st1" d="M665,511.1c-91.5-16.1-182.8-17.5-274-4.1c-9,77.6,47.8,130.6,138.2,150.4C629.4,638.9,667.6,584.2,665,511.1z"/>
+    <path class="st2" d="M665.4,512c2.1,0.5,50.7,34.1,84.3,102.3s4.9,96.4,4.9,96.4s-107.1-83.6-107.2-118.4  C647.3,561.7,663.4,511.6,665.4,512z"/>
+    <path class="st2" d="M392,508c-2.1,0.5-50.7,34.1-84.3,102.3s-4.9,96.4-4.9,96.4s107.1-83.6,107.2-118.4  C410.2,557.7,394.1,507.6,392,508z"/>
+    <path class="st2" d="M532,719.5h-5c-3,0-5.5-2.5-5.5-5.5V518c0-3,2.5-5.5,5.5-5.5h5c3,0,5.5,2.5,5.5,5.5v196  C537.5,717,535,719.5,532,719.5z"/>
+    <circle class="st3" cx="529.5" cy="421.5" r="37.5"/>
+    <circle class="st3" cx="530" cy="273" r="55"/>
+    <path class="st1" d="M400.3,131.4c85.9,11.4,171.7,12.4,257.6,2.9C625.2,85.6,585.1,46.1,528,28C465.6,50,429.9,88.8,400.3,131.4z"/>
+
+  </svg>
+</div>
 

@@ -2,28 +2,28 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-/* App Module */
-import { SharedModule } from '../shared/shared.module';
+/* App modules */
+import { SharedModule } from "../shared/shared.module";
 
 /* Components */
-import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
-import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { SidenavListComponent } from './components/home/sidenav-list/sidenav-list.component';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    FooterComponent,
-    NavBarComponent
+    SidenavListComponent,
+    FooterComponent
+  ],
+  exports: [
+    SidenavListComponent,
+    HomeComponent,
+    FooterComponent
   ],
   imports: [
     CommonModule,
     SharedModule
-  ],
-  exports: [
-    HomeComponent,
-    FooterComponent,
-    NavBarComponent
-  ],
+  ]
 })
 export class CoreModule { }

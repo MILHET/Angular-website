@@ -7,5 +7,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Francois Milhet';
+  title = 'portfolio';
+  onActivate(event) {
+    document.querySelector('mat-sidenav-content').scrollTop = 0;
+  }
 }

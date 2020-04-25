@@ -1,7 +1,5 @@
-/* Angular modules */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-/* Components */
 import { HomeComponent } from './home.component';
 
 describe('HomeComponent', () => {

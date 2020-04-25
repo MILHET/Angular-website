@@ -2,37 +2,26 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
-import { FormsModule } from '@angular/forms';
+import { AppComponent } from './app.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 /* App modules */
 import { CoreModule } from './core/core.module';
-import { SharedModule } from './shared/shared.module';
+import { SharedModule } from "./shared/shared.module";
 
-/* Material Angular */
-import { MDBBootstrapModule } from 'angular-bootstrap-md';
-
-/* Components */
-import { AppComponent } from './app.component';
-import { ProfileComponent } from './profile/profile.component';
-import { ProjectsComponent } from './projects/projects.component';
-import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
-    declarations: [
-        AppComponent,
-        ProfileComponent,
-        ProjectsComponent,
-        ContactComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        CoreModule,
-        SharedModule,
-        FormsModule,
-        MDBBootstrapModule.forRoot()
-    ],
-    providers: [],
-    bootstrap: [AppComponent]
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    CoreModule,
+    SharedModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

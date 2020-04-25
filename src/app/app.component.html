@@ -1,3 +1,10 @@
-<app-nav-bar></app-nav-bar>
-<router-outlet></router-outlet>
-<app-social></app-social>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav role="navigation">
+    <app-sidenav-list (sidenavClose)="sidenav.close()"></app-sidenav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <app-home (sidenavToggle)="sidenav.toggle()"></app-home>
+    <app-footer></app-footer>
+    <app-social></app-social>
+  </mat-sidenav-content>
+</mat-sidenav-container>
