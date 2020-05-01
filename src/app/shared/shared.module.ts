@@ -1,24 +1,24 @@
 /* Angular modules */
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from "@angular/router";
+import { RouterModule } from '@angular/router';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ScrollEventModule } from 'ngx-scroll-event';
 
 /* Material modules */
-import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatButtonModule } from "@angular/material/button";
-import { MatIconModule } from "@angular/material/icon";
-import { MatListModule } from "@angular/material/list";
-import { MatGridListModule } from "@angular/material/grid-list";
-import { MatSidenavModule } from "@angular/material/sidenav";
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatListModule } from '@angular/material/list';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatSidenavModule } from '@angular/material/sidenav';
 
 /* Lottie module */
 import { LottieModule } from 'ngx-lottie';
 import player from 'lottie-web';
 
 /* Components */
-import { SocialComponent } from "./components/social/social.component";
+import { SocialComponent } from './components/social/social.component';
 
 export function playerFactory() {
   return player;

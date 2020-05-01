@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 /* App modules */
-import { SharedModule } from "../shared/shared.module";
+import { SharedModule } from '../shared/shared.module';
 
 /* Components */
 import { HomeComponent } from './components/home/home.component';

@@ -50,7 +50,7 @@ export class HomeComponent implements OnInit {
   }
 
   handleClick(el: HTMLElement): void {
-    el.scrollIntoView({behavior: "smooth", block: "start", inline: "nearest"});
+    el.scrollIntoView({behavior: 'smooth', block: 'start', inline: 'nearest'});
 }
 
   handleAnimation(anim: any) {
